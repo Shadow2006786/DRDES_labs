@@ -1,0 +1,52 @@
+// UserEntity.java (Сервіс 1)
+@Entity @Data
+public class UserAccount {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String username;
+    private String password;
+    private String status; // ACTIVE, BLOCKED
+}
+
+// Book.java (Сервіс 2)
+@Entity @Data
+public class Book {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+    private String category;
+    private String status; // AVAILABLE, RESERVED
+}
+
+// PhoneRecord.java (Сервіс 3)
+@Entity @Data
+public class PhoneRecord {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String fullName;
+    private String phone;
+    private String address;
+}
+
+// Employee.java (Сервіс 4)
+@Entity @Data
+public class Employee {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String fullName;
+    private String department;
+    private String contact;
+    private Double salary;
+}
+
+// Student.java (Сервіс 5)
+@Entity @Data
+public class Student {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String fullName;
+    private String studentId;
+    private Integer course;
+    @ElementCollection
+    private List<String> subjects;
+}

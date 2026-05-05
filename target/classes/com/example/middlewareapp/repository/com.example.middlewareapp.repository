@@ -1,0 +1,5 @@
+public interface UserRepository extends JpaRepository<UserAccount, Long> {}
+public interface BookRepository extends JpaRepository<Book, Long> {}
+public interface PhoneRepository extends JpaRepository<PhoneRecord, Long> {}
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {}
+public interface StudentRepository extends JpaRepository<Student, Long> {}
